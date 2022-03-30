@@ -6,8 +6,8 @@ module.exports = {
   listarContatos: (req, res) => {
     // importando os contatos do usuario
     let contatos = require(`../database/contatos_${uid}.json`);
-    // enviando respostas para o cliente
-    res.send(contatos);
+    // enviando a view para o cliente
+    res.render("home.ejs", {});
   },
 
   capturarContato: (req, res) => {
