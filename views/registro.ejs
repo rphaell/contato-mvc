@@ -21,7 +21,7 @@
     <title>Contatos</title>
   </head>
   <body>
-    <form action="/usuarios">
+    <form action="/usuarios" method="post">
       <label>
         Nome:
         <input type="text" name="nome" id="nome" />
@@ -32,11 +32,11 @@
       </label>
       <label>
         Senha:
-        <input type="email" name="email" id="email" />
+        <input type="password" name="senha" id="senha" />
       </label>
       <label>
         Confirmação de Senha:
-        <input type="email" name="email" id="email" />
+        <input type="password" name="confirmacao" id="confirmacao" />
       </label>
       <div class="controles">
         <button class="link">Cancelar</button>

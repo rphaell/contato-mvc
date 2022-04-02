@@ -13,6 +13,7 @@ const router = express.Router();
 // Pede para o router definir uma rota:(método:get, endereço:/contatos)
 
 router.get("/registrar", UsuariosController.showRegistrar);
+router.post("/usuarios", UsuariosController.store);
 
 // Exportar o router
 

@@ -18,6 +18,9 @@ app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
+//configura o req.body para conter as informações digitadas pelo user.
+app.use(express.urlencoded({ extended: false }));
+
 // criar uma rota get no endereço'/' para responder requisição com a msg "olá"
 
 app.get("/", (req, res) => res.send("Olá"));
