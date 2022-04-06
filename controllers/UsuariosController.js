@@ -6,6 +6,9 @@ module.exports = {
   showRegistrar: (req, res) => {
     res.render("registro");
   },
+  mostrarLogin: (req, res) => {
+    res.render("login");
+  },
   store: (req, res) => {
     //capturar as informações que o ususário digitou
     let { nome, email, senha } = req.body;
