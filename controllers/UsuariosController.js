@@ -49,4 +49,17 @@ module.exports = {
     // direcionando o usuario para a rota GET /
     res.redirect("/contatos");
   },
+  login: (req, res) => {
+    // capturar o email e a senha digitadas
+    let { email, senha } = req.body;
+    // carregar o meu array de usuários
+    const usuarios = require("../database/usuarios.json");
+    //verificar se o e-mail existe e se a senha deste e-mail confere
+
+    usuarios.find((u) => u.email == email);
+
+    // se o usuário não for encontrado ou a senha for inválida, mandar o erro
+    //se o usuário OK: - Setar a session do usuário
+    //                 - Redirecionar o usuário para a tela que lista os contatos
+  },
 };

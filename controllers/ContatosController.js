@@ -27,7 +27,7 @@ module.exports = {
     if (contato === undefined) {
       res.send({ msg: "O contato solicitado não existe" });
     } else {
-      res.send(contato);
+      res.render("contato.ejs", { contato });
     }
   },
 };

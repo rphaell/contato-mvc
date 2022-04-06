@@ -1,5 +1,5 @@
-// Importar o express
-
+// Importar dependências
+const session = require("express-session");
 const express = require("express");
 
 //  importar os reotadores
@@ -16,6 +16,15 @@ const app = express();
 
 // Configurar o EJS como seu template engine
 app.set("view engine", "ejs");
+
+// Configurando o uso da session
+app.use(
+  session({
+    secret: "segredo",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 
 // aplicando middleware globais
 app.use(marcaEntradaDaRequisicao);
